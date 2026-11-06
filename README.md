@@ -1,0 +1,19 @@
+# demandingremigration.com
+
+Sister site to [demandremigration.com](https://demandremigration.com/), [demandingremigration.com](https://demandingremigration.com/), [nozabiha.com](https://nozabiha.com/), [nozabihahalal.com](https://nozabihahalal.com/), [islamophobe.me](https://islamophobe.me/), and [industrialterrorism.com](https://industrialterrorism.com/).
+
+Static Astro site on Cloudflare Workers static assets. Free plan. Not deployed until you run the deploy script.
+
+## Deploy
+
+```bash
+npm install
+npm run deploy
+```
+
+Then attach the custom domain `demandingremigration.com` to the worker `demandingremigration-com`. If that worker name is already taken on the account, rename it in wrangler.toml before the first deploy.
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+
+`www.demandingremigration.com` and `http` on the apex redirect to `https://demandingremigration.com/`. workers.dev is left alone.
